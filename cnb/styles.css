@@ -1,0 +1,243 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(afb.TTF);
+}
+
+body {
+	background-color: #1A1A1A;
+	font-family: Montserrat, "Agency FB", sans-serif;
+	text-shadow: 0px 5px 5px black;
+}
+
+#top, #bottom, #left, #right {
+	background: #262626;
+	position: fixed;
+}
+
+#left, #right {
+	top: 0;
+	bottom: 0;
+	width: 21px;
+}
+
+#left {left: 0;}
+#right {right: 0;}
+#top {top: 0;}
+#bottom {bottom: 0;}
+
+#top, #bottom {
+	left: 0;
+	right: 0;
+	height: 21px;
+}
+
+a {
+	color: #E5E5E5;
+	text-decoration: none;
+}
+
+.site-title {
+	font-size: 72px;
+	margin: 18px;
+	margin-bottom: 0px;
+	text-align: center;
+	color: #E5E5E5;
+	padding: 5px;
+}
+
+.site-subtitle {
+	font-size: 24px;
+	margin: -5px;
+	text-align: center;
+	color: #E5E5E5;
+}
+
+#menu {
+	margin-top: 25px;
+	margin-left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 24px;
+	text-transform: uppercase;
+	text-align: center;
+	width: 90%;
+}
+
+#m2 {
+	margin-top: -15px;
+}
+
+#gameArea {
+	margin-top: 10px;
+	margin-left: 50%;
+	margin-bottom: 15px;
+	transform: translate(-50%, 0);
+	width: 40%;
+	color: #FFFFFF;
+	font-size: 30px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#gameArea input {
+	border: none;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	height: 60px;
+	text-align: center;
+	font-family: Montserrat, "Agency FB", sans-serif;
+	font-size: 30px;
+	text-transform: uppercase;
+	border-style: outset;
+}
+
+#gameArea input:focus {
+	border-style: inset;
+}
+
+#gameArea input.guess-field {
+	background: #262626;
+	color: #FFFFFF;
+	border-style: none;
+}
+
+#gameArea input.submit {
+	background: #E5E5E5;
+	color: #1A1A1A;
+	margin-top: 10px;
+}
+
+#gameArea input.options {
+	width: 50%;
+	background: #E5E5E5;
+	color: #1A1A1A;
+	margin-top: 10px;
+	float: left;
+}
+
+#error1 {
+	color: red;
+	margin-top: 50px;
+	font-size: 24px;
+	text-align: center;
+	visibility: hidden;
+	display: block;
+}
+
+#error2 {
+	color: red;
+	margin-top: -28px;
+	font-size: 24px;
+	text-align: center;
+	visibility: hidden;
+	display: block;
+}
+
+#noGuess {
+	margin-top:110px;
+}
+
+#leftPane, #rightPane {
+	margin-top: -310px;
+	margin-bottom: 30px;
+	width: 20%;
+	color: #FFFFFF;
+	font-size: 26px;
+	text-transform: uppercase;
+	text-align: center;
+	background: #262626;
+	height: 310px;
+}
+
+#leftPane {
+	margin-left: 15%;
+	transform: translate(-50%, 0);
+	float: left;
+}
+
+#rightPane {
+	margin-right: 15%;
+	transform: translate(50%, 0);
+	float: right;
+}
+
+table
+{
+	width: 100%;
+}
+
+th
+{
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+#final {
+	width: 600px;
+	height: 400px;
+	background: #262626;
+	visibility: hidden;
+	display: block;
+	box-sizing: border-box;
+	position: fixed;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	border-style: groove;
+	border-width:5px;
+	font-size: 48px;
+	color: #E5E5E5;
+	box-shadow: 0px 10px 5px black;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#word {
+	visibility: hidden;
+	display: block;
+	position: fixed;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+	font-size: 72px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	text-shadow: 0px 5px 5px black;
+}
+
+#final input {
+	position: fixed;
+	left: 50%;
+	top: 85%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-family: Montserrat, "Agency FB", sans-serif;
+	font-size: 30px;
+	background: #E5E5E5;
+	color: #1A1A1A;
+	border: none;
+	width: 30%;
+	box-sizing: border-box;
+	height: 60px;
+	border-style: outset;
+}
+
+#final input:focus {
+	border-style: inset;
+}
+
+#para {
+	margin-top: 30px;
+	margin-left: 30px;
+	margin-right: 30px;
+	font-size: 24px;
+	color: #E5E5E5;
+	text-shadow: none;
+	text-align: justify;
+}

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+	<head>
+		<title>Umang Agarwal: Resume</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" type=" image/png" href="favicon.png"/>
+	</head>
+	<style>
+	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+	.w3-row-padding img {margin-bottom: 12px}
+	/* Set the width of the sidebar to 120px */
+	.w3-sidebar {width: 150px;background: #222;}
+	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+	#main {margin-left: 150px}
+	/* Remove margins from "page content" on small screens */
+	@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+	.nav-scroll::-webkit-scrollbar {display: block;  width: 10em;  overflow: auto;  height: 2em; width: 2px;  height: 8px;  background-color: #606060;}
+	.nav-scroll::-webkit-scrollbar-thumb {background: #ffffff;}
+	.main-scroll::-webkit-scrollbar {display: block;  width: 10em;  overflow: auto;  height: 2em; width: 5px;  height: 8px;  background-color: #606060;}
+	.main-scroll::-webkit-scrollbar-thumb {background: #ffffff;}
+	::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); border-radius: 10px;}
+	::-webkit-scrollbar-thumb {border-radius: 10px; -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); }
+	/* TIMELINE */
+	* {
+	  box-sizing: border-box;
+	}
+	/* The actual timeline (the vertical ruler) */
+	.timeline {
+	  position: relative;
+	  max-width: 1200px;
+	  margin: 0 auto;
+	}
+	/* The actual timeline (the vertical ruler) */
+	.timeline::after {
+	  content: '';
+	  position: absolute;
+	  width: 6px;
+	  background-color: grey;
+	  top: 20px;
+	  bottom: 150px;
+	  left: 50%;
+	  margin-left: 0px;
+	  z-index:-2;
+	}
+	/* Container around content */
+	.container {
+	  padding: 10px 40px;
+	  position: relative;
+	  background-color: inherit;
+	  width: 50%;
+	}
+	/* The circles on the timeline */
+	.container::after {
+	  content: '';
+	  position: absolute;
+	  width: 25px;
+	  height: 25px;
+	  right: -16px;
+	  background-color: white;
+	  border: 2px solid black;
+	  top: 15px;
+	  border-radius: 50%;
+	  z-index: 0;
+	}
+	/* Place the container to the left */
+	.left {
+	  left: 0;
+	}
+	/* Place the container to the right */
+	.right {
+	  left: 50%;
+	}
+	/* Add arrows to the left container (pointing right) */
+	.left::before {
+	  content: " ";
+	  height: 0;
+	  position: absolute;
+	  top: 22px;
+	  width: 0;
+	  z-index: -1;
+	  right: 30px;
+	  border: medium solid white;
+	  border-width: 10px 0 10px 10px;
+	  border-color: transparent transparent transparent white;
+	}
+	/* Add arrows to the right container (pointing left) */
+	.right::before {
+	  content: " ";
+	  height: 0;
+	  position: absolute;
+	  top: 22px;
+	  width: 0;
+	  z-index: -1;
+	  left: 30px;
+	  border: medium solid white;
+	  border-width: 10px 10px 10px 0;
+	  border-color: transparent white transparent transparent;
+	}
+	/* Fix the circle for containers on the right side */
+	.right::after {
+	  left: -9px;
+	}
+	/* The actual content */
+	.content {
+	  padding: 20px 30px;
+	  background-color: white;
+	  position: relative;
+	  border-radius: 6px;
+	}
+	/* Media queries - Responsive timeline on screens less than 992px wide */
+	@media all and (max-width: 992px) {
+	/* Place the timelime to the left */
+	  .timeline::after {
+		left: 31px;
+	  }
+	/* Full-width containers */
+	  .container {
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+	  }
+	/* Make sure that all arrows are pointing leftwards */
+	  .container::before {
+		left: 60px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+	  }
+	/* Make sure all circles are at the same spot */
+	  .left::after, .right::after {
+		left: 21px;
+	  }
+	/* Make all right containers behave like the left ones */
+	  .right {
+		left: 0%;
+	  }
+	}
+	</style>
+	
+	<body class="w3-black main-scroll">
+
+		<!-- Icon Bar (Sidebar - hidden on small screens) -->
+		<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center nav-scroll">
+			<!-- Avatar image in top left corner -->
+			<img src="umang.jpg" style="width:100%">
+			<a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+				<i class="fa fa-id-card w3-xxlarge"></i><p>ABOUT</p>
+			</a>
+			<a href="#skills" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+				<i class="fa fa-laptop w3-xxlarge"></i><p>SKILLS</p>
+			</a>
+			<a href="#experiences" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+				<i class="fa fa-briefcase w3-xxlarge"></i><p>EXPERIENCES</p>
+			</a>
+			<a href="#education" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+				<i class="fa fa-university w3-xxlarge"></i><p>EDUCATION</p>
+			</a>
+			<a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+				<i class="fa fa-file-code-o w3-xxlarge"></i><p>PROJECTS</p>
+			</a>
+			<a href="#interests" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+				<i class="fa fa-grav w3-xxlarge"></i><p>INTERESTS</p>
+			</a>
+			<a href="#blog" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+				<i class="fa fa-globe w3-xxlarge"></i><p>BLOG</p>
+			</a>
+			<a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+				<i class="fa fa-envelope w3-xxlarge"></i><p>CONTACT ME</p>
+			</a>
+		</nav>
+
+
+		<!-- Navbar on small screens (Hidden on medium and large screens) -->
+		<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+		  <div class="w3-bar w3-black w3-opacity-off w3-hover-opacity-off w3-center w3-small">
+			<a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+			<a href="#skills" class="w3-bar-item w3-button" style="width:25% !important">SKILLS</a>
+			<a href="#experiences" class="w3-bar-item w3-button" style="width:25% !important">EXPERIENCES</a>
+			<a href="#education" class="w3-bar-item w3-button" style="width:25% !important">EDUCATION</a>
+			<a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+			<a href="#interests" class="w3-bar-item w3-button" style="width:25% !important">INTERESTS</a>
+			<a href="#blog" class="w3-bar-item w3-button" style="width:25% !important">BLOG</a>
+			<a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT ME</a>
+		  </div>
+		</div>
+
+
+		<!-- Page Content -->
+		<div class="w3-padding-large" id="main">
+		<!-- Header/Home -->
+			<header class="w3-container w3-padding-32 w3-center w3-black" id="about">
+			<div class="w3-content w3-justify w3-text-grey w3-padding-8 w3-hide-large"></div>
+				<h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Umang Agarwal<span class="w3-hide-small">.</span></h1>
+				<p>Student (Electronics and Communication Engineering)</p>
+			</header>
+
+			<!-- About Section -->
+			<div class="w3-content w3-justify w3-text-grey w3-padding-32" id="description">
+				<h2 class="w3-text-light-grey w3-center">A Programmer and A Tech Enthusiast</h2>
+				<hr style="width:100%" class="w3-opacity">
+				<p>I am a final year undergraduate student at IIT (ISM) Dhanbad. With electronics as my bachelors course and computer science as a minor course, I tend to wear different hats. Some days I am a meticulous designer, the other days I might be found coding programs to solve problems, and ocassionally I tinker with electronic devices and hardware. I have done projects both alone and in group. My curiosity and passion to know new things have enabled me to view the world from various perspectives.</p>
+			<!--	<p>Also, lately I have been posting articles on my blog.</p>-->
+
+				<div class="w3-panel w3-center w3-opacity w3-bar w3-hide-small w3-hide-medium">
+					<a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin w3-xxlarge"></i></a>
+					<a href="#" class="w3-bar-item w3-button"><i class="fa fa-github w3-xxlarge"></i></a>
+					<a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook w3-xxlarge"></i></a>
+					<a href="umang-agarwal-resume.pdf" class="w3-bar-item w3-button w3-white w3-right">
+						<button class="w3-bar-item w3-button w3-padding-medium">
+							<i class="fa fa-download w3-large"></i>&nbsp;&nbsp;Download Resume
+						</button>
+					</a>
+				</div>
+
+				<div class="w3-panel w3-center w3-opacity w3-bar w3-hide-large">
+					<a href="#" class="w3-bar-item w3-button" style="display:inline-block;float:inherit"><i class="fa fa-linkedin w3-xxlarge"></i></a>
+					<a href="#" class="w3-bar-item w3-button" style="display:inline-block;float:inherit"><i class="fa fa-github w3-xxlarge"></i></a>
+					<a href="#" class="w3-bar-item w3-button" style="display:inline-block;float:inherit"><i class="fa fa-facebook w3-xxlarge"></i></a>
+					<br>
+					<br>
+					<a href="umang-agarwal-resume.pdf" class="w3-bar-item w3-button w3-white" style="display:inline-block;float:inherit">
+						<button class="w3-bar-item w3-button w3-padding-medium">
+							<i class="fa fa-download w3-large"></i>&nbsp;&nbsp;Download Resume
+						</button>
+					</a>
+				</div>
+			</div>
+			<!-- End About Section -->
+			
+			
+			<!-- Skills Section -->
+			<div class="w3-content w3-justify w3-text-grey w3-padding-32" id="skills">
+				<div class="w3-content w3-justify w3-text-grey w3-padding-16 w3-hide-large w3-hide-medium"></div>
+				<h2 class="w3-text-light-grey w3-center">Skills</h2>
+				<hr style="width:100%" class="w3-opacity">
+				<p class="w3-wide">Programming Language: C++</p>
+				<div class="w3-white w3-round-large">
+					<div class="w3-dark-grey w3-round-large" style="height:8px;width:75%"></div>
+				</div>
+				<p class="w3-wide">Web Design: HTML5 + CSS3</p>
+				<div class="w3-white w3-round-large">
+					<div class="w3-dark-grey w3-round-large" style="height:8px;width:70%"></div>
+				</div>
+				<p class="w3-wide">Database Management: MySQL</p>
+				<div class="w3-white w3-round-large">
+					<div class="w3-dark-grey w3-round-large" style="height:8px;width:80%"></div>
+				</div>
+				<br><br>
+				<div class="w3-text-white w3-center">I am passionate about electronics and computer science.<p>My skills are not limited to above list.
+				</div>
+			</div>
+			<!-- End Skills Section -->
+			
+			
+			<!-- Experiences Section -->
+			<div class="w3-padding-32 w3-content w3-text-grey" id="experiences">
+				<div class="w3-content w3-justify w3-text-grey w3-padding-16 w3-hide-large w3-hide-medium"></div>
+				<h2 class="w3-text-light-grey w3-center">Experiences</h2>
+				<hr style="width:100%" class="w3-opacity">
+				<div class="w3-container w3-card w3-margin-bottom w3-justify">
+					<div class="w3-container">
+						<h5 class="w3-text-white w3-opacity"><b>Database Migration Engineer for Urvashi Enterprise</b></h5>
+						<h6 class="w3-text-light-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2017</h6>
+						<li>Designed an interface to migrate stock masters from a DOS-based accounting software to Tally.ERP 9 import format.
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-text-white w3-opacity"><b>Front End Developer for <a class="w3-hover-text-green" href="http://urvashienterprise.net" style="text-decoration:none;">urvashienterprise.net</a></b></h5>
+						<h6 class="w3-text-light-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2017</h6>
+						<li>Designed a Single Page Responsive Website for Urvashi Enterprise (Assam) using HTML and w3.css as styling template.
+						<li>The site was designed in a week's time working for a total of about 18-20 hours.
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-text-white w3-opacity"><b>Website Administrator for <a class="w3-hover-text-green" href="http://tinsukia.vkv.in" style="text-decoration:none;">tinsukia.vkv.in</a></b></h5>
+						<h6 class="w3-text-light-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2010 - June 2013</h6>
+						<li>Voluntarily served as the website administrator for Vivekananda Kendra Vidyalaya (Assam).
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-text-white w3-opacity"><b>Positions of Responsibilities Held</b></h5>
+						<h6 class="w3-text-light-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2016 - <span class="w3-tag w3-round w3-red">Current</span></h6>
+						    <li>Representing the students in the classes of CSE (Minor Degree) as the <b>Class Representative</b>.</li>
+						<h6 class="w3-text-light-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011 - 2013</h6>
+						    <li>Served as the <b>IT Club President</b> of Vivekananda Kendra Vidyalaya.</li>
+					</div>
+				</div>				
+			</div>
+			<!-- End Experiences Section -->			
+			
+			<!-- Education Section -->
+			<div class="w3-padding-32 w3-content w3-text-grey" id="education">
+				<div class="w3-content w3-justify w3-text-grey w3-padding-16 w3-hide-large w3-hide-medium"></div>
+				<h2 class="w3-text-light-grey w3-center">Education</h2>
+				<hr style="width:100%" class="w3-opacity">
+				
+				<div class="timeline">
+					<div class="container left">
+						<div class="content">
+							<h2><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014 - <span class="w3-tag w3-round w3-red">Current</span></h2>
+							<p><b>Bachelor of Technology (Honours):<br>Electronics and Communication Engineering</b></p>
+							<li>OGPA: 8.23 (Till Semester VII)</li>
+			<!--				<li>Class Rank: x out of y</li>			-->
+							<hr>
+							<p><b>Minor Degree:<br>Computer Science and Engineering</b></p>
+							<p><span class="w3-tag w3-round w3-red">Graduating in May 2018</span></p>
+							<p><i class="fa fa-map-marker fa-fw w3-margin-right"></i><a href="http://iitism.ac.in" target="_blank" class="w3-hover-text-black" style="text-decoration:none;">Indian Institute of Technology (ISM)</a>
+							<br><i class="fa fa-blank fa-fw w3-margin-right"></i>Dhanbad, Jharkhand</p>
+						</div>
+					</div>
+					<div class="container right">
+						<div class="content">
+							<h2><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2014</h2>
+							<p><b>AIR JEE (Advanced) 2014:</b> 5663</p>
+							<hr>
+							<p>Preparations for JEE (Advanced)</p>
+							<p><i class="fa fa-map-marker fa-fw w3-margin-right"></i>Motion IIT-JEE, Kota</p>
+						</div>
+					</div>
+					<div class="container left">
+						<div class="content">
+							<h2><i class="fa fa-calendar fa-fw w3-margin-right"></i>2002 - 2013</h2>
+							<p><b>AISSCE (Science) 2013:</b> 92.8%</p>
+							<hr>
+							<p><b>AISSE 2011:</b> 9.2 (Equivalent to 87.4%) </p>
+							<p><i class="fa fa-map-marker fa-fw w3-margin-right"></i><a href="http://tinsukia.vkv.in" target="_blank" class="w3-hover-text-black" style="text-decoration:none;">Vivekananda Kendra Vidyalaya</a>
+							<br><i class="fa fa-blank fa-fw w3-margin-right"></i>Tinsukia, Assam (Affiliated to CBSE)</p>
+						</div>
+					</div>
+					<div class="container right">
+						<div class="content">
+							<h2><i class="fa fa-calendar fa-fw w3-margin-right"></i>1998 - 2002</h2>
+							<p><i class="fa fa-map-marker fa-fw w3-margin-right"></i><a href="http://www.buddingbuds.com/" target="_blank" class="w3-hover-text-black" style="text-decoration:none;">Budding Buds Senior Secondary School</a>
+							<br><i class="fa fa-blank fa-fw w3-margin-right"></i>Tinsukia, Assam (Affiliated to CBSE)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Education Section -->
+
+			<!-- Projects Section -->
+			<div class="w3-padding-32 w3-content w3-text-grey" id="projects">
+				<div class="w3-content w3-justify w3-text-grey w3-padding-16 w3-hide-large w3-hide-medium"></div>
+				<h2 class="w3-text-light-grey w3-center">Projects</h2>
+				<hr style="width:100%" class="w3-opacity">
+				<div class="w3-container w3-card w3-margin-bottom w3-justify">
+					<div class="w3-container">
+						<h5 class="w3-text-white w3-opacity"><b><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Academic Project (Minor): A Website for Sharing Books</b></h5>
+						<h6 class="w3-text-light-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2018 - <span class="w3-tag w3-round w3-red">Current</span></h6>
+						<li>In a group of three, we are developing and designing a website for lending and borrowing books.
+						<li>Working under the supervision of Prof. ACS Rao, Department of Computer Science & Engineering, IIT (ISM), Dhanbad.
+						<li>Relevant Areas: Back-End Development, Integration with DBMS.
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-text-white w3-opacity"><b>Custom Digital Photo Frame</b></h5>
+						<h6 class="w3-text-light-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2018 - <span class="w3-tag w3-round w3-red">Current</span></h6>
+						<li>Making a Digital Photo Frame using Raspberry Pi Zero W that syncs images from a Google Picasa account.
+						<li>Python is used for synchronizing the images using the APIs provided by Google Picasa Developer Team.
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-text-white w3-opacity"><b><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Academic Project: First-Principles Study of Binary Compounds</b></h5>
+						<h6 class="w3-text-light-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2015 - Oct 2017</h6>
+						<li>Performed first-principles calculations for various properties of binary compounds using Quantum ESPRESSO, an open-source software package.
+						<li>Worked under the supervision of Dr. Virendra Kumar, Department of Electronics Engineering, IIT (ISM), Dhanbad.
+						<li>Prepared conference paper describing and comparing the obtained results with the reported results. Under review for publication.
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-text-white w3-opacity"><b>Raspberry Pi-based Home Media Centre and Theatre PC</b></h5>
+						<h6 class="w3-text-light-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>July 2017</h6>
+						<li>Built a custom image for Raspberry Pi using the Kodi (formerly xbmc) Open-Source Project that could stream local media or videos from YouTube over Wi-fi.
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-text-white w3-opacity"><b>DC++ Hub using Raspberry Pi</b></h5>
+						<h6 class="w3-text-light-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2017 - Mar 2017</h6>
+						<li>Implemented a Direct Connect (DC) Hub in the college hostel to facilitate file sharing in the local network.
+						<li>Raspberry Pi 2 was used as the server with PtokaX as the server application.
+						<li>MailChimp was used to send the login ID and password (randomly generated) to the users who registered for Hub service.
+						<li>Also, designed a local web portal to communicate the necessary updates and help topics related to DC Hub among the users.
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-text-white w3-opacity"><b>Game: Cows and Bulls</b></h5>
+						<h6 class="w3-text-light-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>July 2016</h6>
+						<li>Designed a simple website using HTML, JavaScript and CSS.
+						<li>Developed the old code-breaking game of guessing words of 3-, 4- or 5-letters. The EOWL was used to get words for dictionary.
+						<li>The game was hosted for few weeks at cowsandbulls.umangasmic.com after which the hosting subscription expired. It is currently available for playing at <a class="w3-hover-text-green" href="http://umang.mathran.com/cnb" target="_blank" style="text-decoration:none;">umang.mathran.com/cnb</a>
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-text-white w3-opacity"><b>Maze Solving Robot</b></h5>
+						<h6 class="w3-text-light-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2015 - Nov 2015</h6>
+						<li>Designed a simple robot using Arduino UNO, motors, chassis and wheels.
+						<li>Implemented the Depth First Search (DFS) algorithm to find a path out of the maze.
+					</div>
+				</div>
+			</div>
+			<!-- End Projects Section -->
+			
+			
+			<!-- Interests Section -->
+			<div class="w3-padding-32 w3-content w3-text-grey" id="interests">
+				<div class="w3-content w3-justify w3-text-grey w3-padding-16 w3-hide-large w3-hide-medium"></div>
+				<h2 class="w3-text-light-grey w3-center">Interests</h2>
+				<hr style="width:100%" class="w3-opacity">
+				<div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+					<div class="w3-quarter w3-section">
+						<span class="w3-xlarge"><i class="fa fa-pencil w3-xxlarge"></i></span><br>
+						Blogging
+					</div>
+					<div class="w3-quarter w3-section">
+						<span class="w3-xlarge"><i class="fa fa-file-code-o w3-xxlarge"></i></span><br>
+						Coding
+					</div>
+					<div class="w3-quarter w3-section">
+						<span class="w3-xlarge"><i class="fa fa-camera-retro w3-xxlarge"></i></span><br>
+						Photography
+					</div>
+					<div class="w3-quarter w3-section">
+						<span class="w3-xlarge"><i class="fa fa-coffee w3-xxlarge"></i></span><br>
+						Coffee
+					</div>
+				</div>
+			</div>
+			<!-- End Interests Section -->
+
+
+			<!-- Blog Section -->
+			<div class="w3-padding-32 w3-content w3-text-grey" id="blog">
+				<div class="w3-content w3-justify w3-text-grey w3-padding-16 w3-hide-large w3-hide-medium"></div>
+				<h2 class="w3-text-light-grey w3-center">My Photo Blog</h2>
+				<hr style="width:100%" class="w3-opacity">
+				<!-- Photo Grid--
+				<div class="w3-row-padding w3-padding-16 w3-center" id="myblogs">
+					<div class="w3-quarter">
+						<img src="faceoff.jpg" alt="article1" style="width:100%">
+						<h3>Virtualization vs Simulation vs Emulation</h3>
+						<p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+					</div>
+					<div class="w3-quarter">
+						<img src="matrix.jpg" alt="article2" style="width:100%">
+						<h3>The Matrix Trilogy: Decoded</h3>
+						<p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+					</div>
+					<div class="w3-quarter">
+						<img src="matrix2.jpg" alt="article3" style="width:100%">
+						<h3>Murphy's Law: Explained</h3>
+						<p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+					<p>What else?</p>
+					</div>
+					<div class="w3-quarter">
+						<img src="agent.jpg" alt="article4" style="width:100%">
+						<h3>Places You Should Visit in North-Eastern India</h3>
+						<p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+					</div>
+				</div>
+				<div class="w3-center"><a href="http://blog.mathran.com" target="_blank" class="w3-button w3-center w3-padding-large">VISIT MY BLOG</a></div>
+				
+				<br><br>	
+				
+				<!-- Insta Photo Grid-->
+				<div class="w3-row-padding w3-padding-4 w3-center" id="myinsta">
+					<div class="w3-quarter">
+						<a target="_blank" href="https://www.instagram.com/p/BdeuMs9HGoK7bhp7RrIHth4yQkQnd8McmO3pwY0/"><img src="https://scontent-bom1-1.cdninstagram.com/vp/b70ae88acbfd65252048b77bb6f9e7fc/5B1AC8A7/t51.2885-15/s640x640/sh0.08/e35/26153162_508119459572332_8328456708141613056_n.jpg" alt="InstaPost1" style="width:100%"></a>
+					</div>
+					<div class="w3-quarter">
+						<a target="_blank" href="https://www.instagram.com/p/BLgTSHBjfM8kwMvmkkfciIVJTZ0IlyF3utxS-I0/"><img src="https://scontent-bom1-1.cdninstagram.com/vp/59863d79e62ff2d1cffd766816da912b/5B02C5B7/t51.2885-15/e35/14591014_1785617761696289_4336121371982561280_n.jpg" alt="InstaPost2" style="width:100%"></a>
+					</div>
+					<div class="w3-quarter">
+						<a target="_blank" href="https://www.instagram.com/p/BVUA9m3nK0lYMs1_J6wdoqv1waWIyIRViOMGDg0/"><img src="https://scontent-bom1-1.cdninstagram.com/vp/129be3bb3d0603bfd13047d6fa8ea8ee/5B0D9BA4/t51.2885-15/e35/19227463_1389113131123994_3449607544761221120_n.jpg" alt="InstaPost3" style="width:100%"></a>
+					</div>
+					<div class="w3-quarter">
+						<a target="_blank" href="https://www.instagram.com/p/Be4_ANGHqJJHWDHp1mbDIKcc6P0EBgnxbPkWYg0/"><img src="https://scontent-bom1-1.cdninstagram.com/vp/e186584dda6baaaebf2e00104f190c9b/5B01B0AD/t51.2885-15/e35/26871658_144027602918855_5302628136163213312_n.jpg" alt="InstaPost4" style="width:100%"></a>
+					</div>
+				</div>
+				<div class="w3-row-padding w3-padding-4 w3-center w3-hide-small" id="myinsta">
+					<div class="w3-quarter">
+						<a target="_blank" href="https://www.instagram.com/p/Bc_1EpSnvxD098N_J8cc1sBBIq3rTEM7i6jC2w0/"><img src="https://scontent-bom1-1.cdninstagram.com/vp/c1d715c255b7fec85bc512bc112c1e2f/5AFFB171/t51.2885-15/s640x640/sh0.08/e35/25011076_167480983864137_1785842337910358016_n.jpg" alt="InstaPost5" style="width:100%"></a>
+					</div>
+					<div class="w3-quarter">
+						<a target="_blank" href="https://www.instagram.com/p/BSB6YpbDVPhSyi4NORAX3AQdBOXMZoa_OPV7CU0/"><img src="https://scontent-bom1-1.cdninstagram.com/vp/2a964a031d2dc9a1560f0d2b3c1a958a/5B1EFFE2/t51.2885-15/e35/17494344_763559263820519_1689732617777184768_n.jpg" alt="InstaPost6" style="width:100%"></a>
+					</div>
+					<div class="w3-quarter">
+						<a target="_blank" href="https://www.instagram.com/p/BOg1GgogmTCE4kQwat1GiccpefDpidvH5hYaek0/"><img src="https://scontent-bom1-1.cdninstagram.com/vp/84115b10c7f6bc547ccab8776a862036/5B0C1E4B/t51.2885-15/e35/15624281_1918038541764473_6648027182801092608_n.jpg" alt="InstaPost7" style="width:100%"></a>
+					</div>
+					<div class="w3-quarter">
+						<a target="_blank" href="https://www.instagram.com/p/BPZINJ7gvdo5neBtkRT19AMbo1kH5XnxObeRHQ0/"><img src="https://scontent-bom1-1.cdninstagram.com/vp/a15d3084dcfdfafba96222c685663c65/5B193A92/t51.2885-15/e35/16110535_1210001259090179_9076269763449061376_n.jpg" alt="InstaPost8" style="width:100%"></a>
+					</div>
+				</div>
+				<div class="w3-center"><a href="https://instagram.com/umang.mathran" class="w3-button w3-center w3-padding-large">VISIT MY INSTAGRAM</a></div>
+			</div>
+			<!-- End Blog Section -->
+  
+			<!-- Contact Section -->
+			<div class="w3-padding-32 w3-content w3-text-grey" id="contact">
+				<div class="w3-content w3-justify w3-text-grey w3-padding-16 w3-hide-large w3-hide-medium"></div>
+				<h2 class="w3-text-light-grey w3-center">Contact Me</h2>
+				<hr style="width:100%" class="w3-opacity">
+				<div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+					<div class="w3-third w3-dark-black">
+						<p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+						<p><p class="w3-hide-small">EMAIL ID</p><a class="w3-hover-text-green" href="mailto:umang@mathran.com" style="text-decoration:none;">umang@mathran.com</a><br class="w3-hide-small"><br class="w3-hide-small"></p>
+					</div>
+					<div class="w3-third w3-grey">
+						<p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+						<p>Room 159, Diamond Hostel<br>Indian Institute of Technology (ISM)<br>Dhanbad | Jharkhand - 826 004</p>
+					</div>
+					<div class="w3-third w3-dark-black">
+						<p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+						<p><p class="w3-hide-small">PHONE</p>+91 957 238 5201<br class="w3-hide-small"><br class="w3-hide-small"></p>
+					</div>
+				</div>
+				<p class="w3-text-light-grey">Let's get in touch. Send me a message:</p>
+				<form method="post" action="message.php" target="_blank">
+					<p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="name"></p>
+					<p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="email"></p>
+					<p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="subject"></p>
+					<p><textarea class="w3-input w3-padding-16" type="text" placeholder="Message" required name="comment" maxlength="1500" rows="6"></textarea></p>
+					<p>
+						<button class="w3-button w3-light-grey w3-padding-large" type="submit">
+							<i class="fa fa-paper-plane"></i> SEND MESSAGE	
+						</button>
+					</p>
+				</form>
+			</div>
+			<!-- End Contact Section -->
+			
+			<!-- Footer -->
+			<footer class="w3-content w3-padding-32 w3-text-grey w3-xlarge w3-center">
+				<a href="https://facebook.com/umang.mathran" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;&nbsp;&nbsp;
+				<a href="https://instagram.com/umang.mathran" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>&nbsp;&nbsp;&nbsp;
+				<a href="https://twitter.com/UmangMathran" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;&nbsp;&nbsp;
+				<a href="https://in.linkedin.com/in/umang-mathran" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;&nbsp;&nbsp;
+				<a href="https://github.com/umangmathran" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+				<p class="w3-medium">Powered by <a href="https://www.w3.org/html/" target="_blank" class="w3-hover-text-green" style="text-decoration:none;">HTML</a> and <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green" style="text-decoration:none;">w3.css</a>
+				<br>Optimized for <a href="http://www.google.com/chrome" target="_blank" class="w3-hover-text-green" style="text-decoration:none;">Google Chrome</a></p>
+				<p class="w3-medium">Designed by Umang Agarwal</p>
+			</footer>
+			<!-- End footer -->
+			
+		</div>
+	</body>
+</html>
