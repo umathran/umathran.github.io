@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Cows-and-Bulls &#8211; A Four-Letter Word Guessing Game</title>
+		<link rel="icon" type="image/png" href="bull.png">
+		<link rel="stylesheet" href="styles.css">
+		<script src="four/cowsAndBulls.js"></script>
+		<script src="four/dict.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				randWord();
+			};
+		</script>
+	</head>
+	<body>
+		<h1 class="site-title"><a href="http://cowsandbulls.umangasmic.com">COWS-&-BULLS</a></h1>
+		<h1 class="site-subtitle">A Four-Letter Word Guessing Game</h1>
+		<div id="menu">
+			<p id="m1">
+				<a href="about.htm">about the game</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+				<a href="howto.htm">how to play</a>
+			</p>
+			<p id="m2">
+				<a href="three">3-letter version</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+				<a href="five">5-letter version</a>
+			</p>
+		</div>
+		<div id="error1">Enter a 4-letter word with non-repeating letters!</div>
+		<div id="error2">Invalid word! Not found in Dictionary.</div>
+		<div id="gameArea">
+			<form onSubmit="checkGuess(); return false;">
+			<input class="guess-field" type="text" pattern=".{4,4}" value="" maxlength="4" placeholder="ENTER 4-LETTER WORD" id="someGuess" required title="Enter a 4-letter word">
+			<input class="submit" type="submit" value="SUBMIT GUESS" onSubmit="checkGuess(); return false;">
+			<input class="options" type="button" value="RETRY" onClick="retryIt()">
+			<input class="options" type="button" value="GIVE UP!" onClick="giveUp(); return false;">
+			<p id="noGuess"></p>
+		</div>
+		<div id="leftPane">
+			<table id="lTab">
+				<tr>
+					<th>guess</th>
+					<th>c</th>
+					<th>b</th>
+				</tr>
+			</table>
+		</div>
+		<div id="rightPane">
+			<table id="rTab">
+				<tr>
+					<th>guess</th>
+					<th>c</th>
+					<th>b</th>
+				</tr>
+			</table>
+		</div>
+		<div id="final">
+			<div id="word"></div>
+			<div id="gameOver"></div>
+			<input class="options" type="button" value="PLAY AGAIN" onClick="playAgain(); return false;">
+		</div>
+		<div id="left"></div>
+		<div id="right"></div>
+		<div id="top"></div>
+		<div id="bottom"></div>
+	</body>
+</html>
